@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex</title>
+    <style>
+        .item{
+                margin: 5px;
+                padding: 5px;
+                background: #447;
+                text-align: center;
+                font-size: 1em;
+                color: #fff;
+        }
+        .container{
+            max-width: 600px; /*pode alterar o tamanho do container se retirarmos ou mudarmos o valor do max-width*/
+            margin:0 auto;
+            border: 1px solid #000;
+            /* a tag flex-wrap define a quebra de linha do conteiner flexivel, 
+            o padrão é nowrap, para haver a quebra de linha é só mudar para wrap
+            /*flex-direction:row-reverse;          
+            /* para transformar o container em flex é só usar display:flex; */                
+        }
+
+        /*cria-se uma classe com o nome de "flexivel" para tratar*/
+        .flexivel{
+            display: flex;
+        }
+        .horizontal{
+            flex-direction: row;
+        }
+        .vertical{
+            flex-direction: column;
+        }
+        .quebra{
+            flex-wrap: wrap;
+        }
+        .fluxo-horizontal-quebra{
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .fluxo-horizontal-sem-quebra{
+            flex-flow: row nowrap;
+        }
+ /*       p{
+            text-align: center;
+            margin: 25px 0 0 0;
+            font-size: 1.5em;
+            font-weight:bold;
+            color:#777;
+
+        } */
+        body{
+            font-family: arial;
+            color:#000;
+        }
+    </style>
+</head>
+<body> 
+        <div class="container flexivel fluxo-horizontal-sem-quebra">
+            <div class="item">CFB Cursos 1</div>
+            <div class="item">CFB Cursos 2</div>
+            <div class="item">CFB Cursos 3</div>
+            <div class="item">CFB Cursos 4</div>
+            <div class="item">CFB Cursos 5</div>
+            <div class="item">CFB Cursos 6</div>
+            <div class="item">CFB Cursos 7</div>
+            <div class="item">CFB Cursos 8</div>
+            <div class="item">CFB Cursos 9</div>
+            <div class="item">CFB Cursos 10</div>
+        </div>
+    
+</body>
+</html>
